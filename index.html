@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/reset.css">
+    <link rel="stylesheet" href="./asset/css/res.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="./asset/font/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./asset/css/grid.css">
+    <title>Demo</title>
+</head>
+<body>
+    <div class="app">
+        <div id="navigation">
+                <div class="navigation-logo">
+                    <div class="navigation-logo__img" style="background: url(https://static-zmp3.zadn.vn/zmp3_rpt/images/logo-mp3.svg) top center / contain no-repeat;">
+                    </div>
+                </div>
+                <ul class="navigation__bar">
+                    <li>
+                        <i class="fa-solid fa-headphones"></i>
+                        Cá Nhân
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-compact-disc"></i>
+                        Khám Phá
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                        #zingchart
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-radiation"></i>
+                        Radio
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-wifi"></i>
+                        Theo Dõi
+                    </li>
+                </ul>
+                <div class="navigation__scroll">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-music"></i>
+                            Nhạc Mới
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-icons"></i>
+                            Thể Loại
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            Top 100
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-record-vinyl"></i>
+                            Music Video
+                        </li>
+                    </ul>
+                    <div class="navigation__overlay">
+                        <div class="navigation__vip hide-on-tablet">
+                            <span>
+                                Nghe nhạc không quảng cáo cùng kho nhạc VIP
+                            </span>
+                            <button>MUA VIP</button>
+                        </div>
+                    </div>
+                    <div class="navigation__library">
+                        <span class="hide-on-tablet">THƯ VIỆN</span>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-circle-play"></i>
+                                Bài Hát
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-rectangle-list"></i>
+                                Playlist
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                Gần Đây
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navigation__create">
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Tạo playlist mới</span>
+                    </li>
+                </div>
+        </div>
+        <div id="main">
+            <div class="main__navbar">
+                <div class="grid sm-wide">
+                    <div class="main__control">
+                        <div class="navbar__pagination">
+                            <div class="navbar__pagination-back">
+                                <i class="bi bi-arrow-left-short"></i>
+                            </div>
+                            <div class="navbar__pagination-next">
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                        </div>
+                        <div class="main__search">
+                            <i class="fa-solid fa-magnifying-glass main__search-icon"></i>
+                            <input type="search" name="" class="main__search-input" placeholder="Nhập tên bài hát, Nghệ sĩ hoặc MV...">
+                            <div class="main__search-history">
+                                <span>Đề xuất cho bạn</span>
+                                <ul class="main__search-history__list">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__extension">
+                        <ul>
+                            <li class="main__extension-download">
+                                <i class="fa-solid fa-download"></i>
+                                <span>Tải bản Windows</span>
+                                <input type="file" name="mp3-download" id="">
+                            </li>
+                            <li class="main__extension-background">
+                                <i class="fa-solid fa-shirt"></i>
+                            </li>
+                            <li class="main__extension-setting">
+                                <i class="fa-solid fa-gear"></i>
+                            </li>
+                            <li class="main__extension-avatar">
+                                <div style="background: url(https://taytou.com/wp-content/uploads/2022/08/Avatar-trang-xoa-don-gian-cho-nam-nen-xam.jpg) top center / contain no-repeat;"></div>
+                            </li>
+                        </ul>
+                        <div class="main__extension-background--theme">
+                            <i class="fa-solid fa-xmark close-icon"></i>
+                            <span>Giao Diện</span>
+                            <div class="main__extension-background--theme-box">
+                                <span>Chủ Đề</span>
+                                <div class="grid">
+                                    <div class="row" style="width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__personal"> 
+                <div class="grid sm-wide">
+                    <div class="row">
+                        <div class="col l-4 m-3 c-3">
+                            <div class="main__personal-album">
+                                <div class="main__personal-album__frame">
+                                    <div class="main__personal-album__img">
+                                        <div class="main__personal-album__img-overlay">
+                                            <button class="main__personal-album__img-button--play">
+                                                <i class="fa-solid fa-play"></i>
+                                            </button>     
+                                            <button class="main__personal-album__img-button--pause hide">
+                                                <div class="sound__bar">
+                                                    <div class="bar"></div>
+                                                    <div class="bar"></div>
+                                                    <div class="bar"></div>
+                                                    <div class="bar"></div>
+                                                </div>
+                                            </button> 
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="main__personal-album__info">
+                                    <span class="name">99%</span>
+                                    <span class="author">MCK • 2023</span>
+                                    <span class="liker">--- người yêu thích</span>
+                                </div>
+                                <button class="main__personal-album__button--play">
+                                    <i class="fa-solid fa-play"></i> 
+                                    TIẾP TỤC PHÁT
+                                </button>
+                                <button class="main__personal-album__button--pause hide">
+                                    <i class="fa-solid fa-pause"></i>
+                                    TẠM DỪNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col l-8 m-9 c-9">
+                            <div class="main__personal-song">
+                                <div class="main__personal-song__heading">
+                                    <span>
+                                        <i class="bi bi-filter-circle"></i>
+                                        BÀI HÁT
+                                    </span>
+                                    <span>THỜI GIAN</span>
+                                </div>
+                                <div class="main__personal-song__list">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="song-bar">
+                <div class="song-bar__song-item">
+                    <div class="song-bar__song-item__img" >
+
+                    </div>
+                    <div class="song-bar__song-item__info">
+                        <span class="name">Tại vì sao</span>
+                        <span class="author">
+                            <i class="bi bi-explicit"></i>
+                            MCK
+                        </span>
+                    </div>
+                </div>
+                <div class="song-bar__control-item">
+                    <div class="song-bar__control-item__buttons">
+                        <button>
+                            <i class="fa-solid fa-shuffle"></i>
+                        </button>
+                        <button class="button-back">
+                            <i class="fa-solid fa-backward"></i>
+                        </button>
+                        <button class="button-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="button-pause  hide">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                        <button class="button-next">
+                            <i class="fa-solid fa-forward"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-repeat"></i>
+                        </button>
+                    </div>
+                    <div class="song-bar__control-item__time-bar">
+                        <span></span>
+                        <input type="range" class="time-bar" value="0" max="100">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="song-bar__tool-item">
+                    <button>
+                        <i class="bi bi-badge-cc"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <button>
+                        <i class="bi bi-pip"></i>
+                    </button>
+                    <button class="unmuted-volume">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <button class="muted-volume hide">
+                        <i class="fa-solid fa-volume-xmark"></i>
+                    </button>
+                    <input type="range" class="volume-bar" value="1" min="0" max="1" step="0.01">
+                    <button>
+                        <i class="bi bi-music-note-list"></i>
+                    </button>
+                </div>
+        </div>
+        <audio src="" volume="1">
+        </audio>
+    </div>
+    <script src="./asset/js/main.js"></script>
+</body>
+</html>

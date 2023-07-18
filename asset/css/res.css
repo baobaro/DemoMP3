@@ -1,0 +1,28 @@
+@media (max-width: 1205px) {
+    :root{
+        --navigation-width: 200px;
+        --search-bar-width: 300px;
+    }
+    .navigation__vip span{
+        font-size: 1.2rem;
+    }
+
+}
+@media (max-width: 1110px){
+    .main__extension-background--theme{
+        right: 0;
+        top:calc(var(--nav-height) - 24px);
+        width: 500px;
+    }
+}
+@media (max-width: 1044px){
+    .hide-on-tablet{
+        display:none;
+    }
+    :root{
+        --navigation-width: 70px;
+    }
+    .navigation__library{
+        margin-top:0;
+    }
+}
