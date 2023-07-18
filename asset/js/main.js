@@ -283,11 +283,11 @@ const app = {
             song = _this.songs.find(function(song){
                 return song.id == indexSong;
             })
-            audio.src = `../asset/music/${song.path}`
+            audio.src = `asset/music/${song.path}`
             songBarInfo.innerHTML = 
             `
                 <div class="song-bar__song-item__img" 
-                style="background: url('./asset/img/${song.img}') top center / contain no-repeat">
+                style="background: url('asset/img/${song.img}') top center / contain no-repeat">
                 </div>
                 <div class="song-bar__song-item__info">
                     <span class="name">${song.name}</span>
