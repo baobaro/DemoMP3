@@ -426,7 +426,7 @@ li.active::before{
     border-radius: 10px;
 }
 .main__personal-album__img{
-    background: url(../asset/img/album.jpg) top center / contain no-repeat;
+    background: url(/asset/img/album.jpg) top center / contain no-repeat;
     width: 100%;
     padding-top:100%;
     position: relative;
@@ -540,7 +540,7 @@ li.active::before{
     flex-direction: column;
 }
 .main__personal-song__item-img{
-    background: url(/asset/img/album.jpg) top center / contain no-repeat;
+    background: url(../img/album.jpg) top center / contain no-repeat;
     width: 40px;
     height: 40px;
     border-radius: 4px;
