@@ -424,7 +424,8 @@ const app = {
         //Seek Song
         var seekBar = $('.time-bar')
         audio.addEventListener('timeupdate',function(){
-            seekBar.value = this.currentTime*100/this.duration
+            seekBar.max = this.duration
+            seekBar.value = this.currentTime
             var percent = seekBar.value / seekBar.max * 100
             seekBar.style.background = 
             `
@@ -432,7 +433,7 @@ const app = {
             `
         })
         seekBar.addEventListener('input',function(){
-            audio.currentTime = seekBar.value * audio.duration / 100    
+            audio.currentTime = seekBar.value   
         })
         //Slider Input Range 
         const inputRanges = $$('input[type="range"]')
