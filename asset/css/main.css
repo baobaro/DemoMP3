@@ -169,6 +169,7 @@ li.active::before{
     left: var(--navigation-width);
     width: calc(100% - var(--navigation-width));
     height: var(--nav-height);
+    z-index:1;
 }
 .main__navbar .grid{
     display:flex;
@@ -271,9 +272,8 @@ li.active::before{
 
 }
 .main__extension li{
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size:1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.4rem;
     font-weight: 600;
     background-color:var(--search-bar-color);
     display:flex;
@@ -287,7 +287,8 @@ li.active::before{
     position: relative;
 }
 .main__extension-download span{
-    color:white;
+    color: var(--button-color);
+    filter: brightness(1.3);
 }
 .main__extension-download input{
     position: absolute;
@@ -296,6 +297,11 @@ li.active::before{
 }
 .main__extension-download i{
     margin-right:12px;
+    color: var(--button-color);
+    filter: brightness(1.3);
+}
+.main__extension-background i{
+    color:var(--button-color)
 }
 .main__extension-background, .main__extension-setting,.main__extension-avatar{
     width: 40px;

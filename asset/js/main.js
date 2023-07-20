@@ -147,6 +147,7 @@ const app = {
                 appColor: '#061D4F',
                 navigationColor: '#132958',
                 songBarColor: '#051740',
+                buttonColor:'#3056DC',
                 name:'Xanh'
             },
             {
@@ -156,6 +157,7 @@ const app = {
                 appColor: '#1E1E1E',
                 navigationColor: '#292929',
                 songBarColor: '#181818',
+                buttonColor:'#8B45CA',
                 name:'Tối'
             },
             {
@@ -165,6 +167,7 @@ const app = {
                 appColor: '#170F23',
                 navigationColor: '#231B2E',
                 songBarColor: '#130C1C',
+                buttonColor:'#8B45CA',
                 name:'Tím'
             },
             {
@@ -174,6 +177,7 @@ const app = {
                 appColor: '#411636',
                 navigationColor: '#4B2240',
                 songBarColor: '#4C1A3F',
+                buttonColor:'#CA4974',
                 name:'Hồng'
             },
             {
@@ -183,6 +187,7 @@ const app = {
                 appColor: '#251B18',
                 navigationColor: '#302724',
                 songBarColor: '#30201D',
+                buttonColor:'#A4551D',
                 name:'Nâu'
             },
             {
@@ -192,6 +197,7 @@ const app = {
                 appColor: '#142922',
                 navigationColor: '#20342D',
                 songBarColor: '#19342C',
+                buttonColor: '#138673',
                 name:'Xanh rêu'
             }
         ]
@@ -213,14 +219,15 @@ const app = {
         themeBox.innerHTML = themeItems
 
         // Change
+        var rootStyle = document.documentElement.style;
         function changeTheme(result){
             rootStyle.setProperty('--app-color',result.appColor)
             rootStyle.setProperty('--navigation-color',result.navigationColor)
             rootStyle.setProperty('--search-bar-color',result.searchBarColor)
             rootStyle.setProperty('--active-color',result.activeColor)
             rootStyle.setProperty('--song-bar-color',result.songBarColor)
+            rootStyle.setProperty('--button-color',result.buttonColor)
         }
-        var rootStyle = document.documentElement.style;
         const buttonThemes = $$('.change-background button')
         for (var buttonTheme of buttonThemes){
             buttonTheme.addEventListener('click',function(e){
