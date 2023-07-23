@@ -437,7 +437,7 @@ const app = {
         var seekBar = $('.time-bar')
         audio.addEventListener('timeupdate',function(){
             seekBar.max = this.duration
-            seekBar.value = this.currentTime
+            seekBar.value = Math.floor(this.currentTime)
             var percent = seekBar.value / seekBar.max * 100
             seekBar.style.background = 
             `
@@ -469,16 +469,28 @@ const app = {
         var totalTime = $('.total-time')
         var totalTimeMin
         var totalTimeSec
+        var currentTimeMin
+        var currentTimeSec
         audio.addEventListener('durationchange',function(){
             //Set total time minute
             totalTimeMin = Math.floor(this.duration / 60)
             if (totalTimeMin < 10) totalTimeMin = `0${totalTimeMin}`
-            else totalTimeMin = `${totalTimeMin}`
             //Set total time second
             totalTimeSec = Math.floor (this.duration) % 60
             if (totalTimeSec < 10) totalTimeSec = `0${totalTimeSec}`
-            else totalTimeSec = `${totalTimeSec}`
             totalTime.innerHTML = `${totalTimeMin}:${totalTimeSec}`
+            //Time 00:00
+            currentTime.innerHTML = '00:00'
+        })
+        //Current time
+        audio.addEventListener('timeupdate',function(){
+            currentTimeMin = Math.floor(this.currentTime / 60)
+            currentTimeSec = Math.floor(this.currentTime) % 60
+            //Set current time minute
+            if (currentTimeMin < 10) currentTimeMin = `0${currentTimeMin}`
+            //Set current time second
+            if (currentTimeSec < 10) currentTimeSec = `0${currentTimeSec}`
+            currentTime.innerHTML = `${currentTimeMin}:${currentTimeSec}`
         })
     },
     start: function(){
