@@ -118,7 +118,7 @@ const app = {
 
         // Show history search
         const historyBlock = $('.main__search-history')
-        inputItem.addEventListener('focus',function(e){
+        inputItem.addEventListener('click',function(e){
             historyBlock.style.display = 'block'
             searchBarItem.classList.add('active-search-bar')
         })
@@ -136,6 +136,11 @@ const app = {
         backgroundItem.onclick = function(){
             backgroundItemBox.classList.add('open')
         }
+        //Prevent Default
+        spanHistory = $('.main__search-history span')
+        spanHistory.addEventListener('mousedown',function(e){
+            e.preventDefault();
+        })
     },
     themeApp: function(){
         const themeBox = $('.main__extension-background--theme-box .row')
@@ -459,6 +464,22 @@ const app = {
                 `
             })
         }
+        //Seek Bar Time 
+        var currentTime = $('.current-time')
+        var totalTime = $('.total-time')
+        var totalTimeMin
+        var totalTimeSec
+        audio.addEventListener('durationchange',function(){
+            //Set total time minute
+            totalTimeMin = Math.floor(this.duration / 60)
+            if (totalTimeMin < 10) totalTimeMin = `0${totalTimeMin}`
+            else totalTimeMin = `${totalTimeMin}`
+            //Set total time second
+            totalTimeSec = Math.floor (this.duration) % 60
+            if (totalTimeSec < 10) totalTimeSec = `0${totalTimeSec}`
+            else totalTimeSec = `${totalTimeSec}`
+            totalTime.innerHTML = `${totalTimeMin}:${totalTimeSec}`
+        })
     },
     start: function(){
         this.activeSideBar()

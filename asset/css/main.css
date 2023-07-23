@@ -600,7 +600,7 @@ li.active::before{
 .song-bar__song-item__img{
     width: 70px;
     height: 70px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 .song-bar__control-item button{
     color: white;
@@ -619,11 +619,21 @@ li.active::before{
     flex-direction: column;
     align-items: center;
 }
+.song-bar__control-item__time-bar{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+.song-bar__control-item__time-bar span{
+    color: white;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .time-bar{
     width: 420px;
     height: 4px;
-    margin-top: 12px;
     appearance: none;
+    margin: 0 8px; 
 }
 .volume-bar{
     appearance: none;
