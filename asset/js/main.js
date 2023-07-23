@@ -436,7 +436,7 @@ const app = {
         //Seek Song
         var seekBar = $('.time-bar')
         audio.addEventListener('timeupdate',function(){
-            seekBar.max = this.duration
+            seekBar.max = Math.floor(this.duration)
             seekBar.value = Math.floor(this.currentTime)
             var percent = seekBar.value / seekBar.max * 100
             seekBar.style.background = 
